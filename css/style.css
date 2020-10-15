@@ -280,7 +280,7 @@ header {
   .hamburger,
   .hamburger::before,
   .hamburger:after {
-    background: var(--clr-active);
+    background: var(--clr-text);
     border-radius: 1em;
     height: 3px;
     transition: transform 250ms ease-in-out;
@@ -334,7 +334,6 @@ header {
 }
 
 /* My Skills */
-
 .my-skills {
   background-color: var(--clr-bg-secondary);
   background-blend-mode: multiply;
@@ -569,7 +568,7 @@ html.transition *:after {
 }
 
 .go-top {
-  color: black;
+  color: var(--clr-text);
   bottom: 40px;
   font-size: var(--fs-h2);
   position: fixed;

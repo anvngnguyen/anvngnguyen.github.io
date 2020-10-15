@@ -1,51 +1,177 @@
 <!DOCTYPE html>
-
-<html lang="eng">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale:1.0" />
-    <title>An Nguyen Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Porfolio</title>
+
+    <!-- Normalize.css makes browsers render all elements more consistently and in line with modern standards. -->
+    <link rel="stylesheet" href="https://pagecdn.io/lib/normalize/8.0.1/normalize.min.css" />
+
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
     <header>
-        <div class="header-logo">
-            <img src="img/header_image.jpg" alt="" />
+        <div class="logo">
+            <img src="img/header_logo.png" alt="Header Logo"/>
         </div>
-
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"> </span>
-        </button>
-
         <nav class="nav">
             <ul class="nav__list">
+                <li class="nav__item"><a href="#skills" class="nav__link">My Skills</a></li>
                 <li class="nav__item">
-                    <a href="#home" class="nav_link">Home</a>
+                    <a href="#about" class="nav__link">About Me</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav_link">About Me</a>
+                    <a href="#projects" class="nav__link">My Projects</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav_link">My Work</a>
+                    <a href="#contact-me" class="nav__link">Contact Me</a>
                 </li>
             </ul>
         </nav>
+        <div class="toggle-container">
+            <input type="checkbox" name="theme" id="switch" /><label for="switch">Toggle</label>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
     </header>
 
     <!-- Introduction -->
     <section class="intro" id="home">
         <h1 class="section__title section__title--intro">
-            Hello, I am <strong>An Nguyen</strong>
+            Hi, I am <strong>An Nguyen</strong>
         </h1>
         <p class="section__subtitle section__subtitle--intro">
-            Lorem Ipsum
+            a chronic procrastinator
         </p>
-        <img src="img/intro_image.jpg" alt="Another picture of a cat">
+        <img src="img/intro.png" alt="my profile picture" class="intro__img" />
     </section>
+
+    <!-- My Skills -->
+    <section class="my-skills" id="skills">
+        <h2 class="section__title section__title--skills">What I do</h2>
+        <div class="skills">
+            <div class="skill">
+                <h3>Web Development</h3>
+                <p>
+                    My Web Development experience can be summed up as taking 2 classes
+                    in Web Design and following along YouTube tutorials. In other words,
+                    I can somewhat read and understand HTML, CSS, and JavaScript but
+                    nothing more. But if you decide to give me a chance (against all
+                    your rational judgement), I will do my best to give you a
+                    satisfactory result.
+                </p>
+            </div>
+
+            <div class="skill">
+                <h3>Data Science</h3>
+                <p>
+                    I am interested in data, and that's the reason why I decided to
+                    concentrate in Data Science at USC. I learnt quite a few interesting
+                    thing, but for the most part, I am still new to this. So to make up
+                    for lost ground, I just read a lot of Kaggle notebook to understand
+                    the technique. I also know how to use Tableau and Microsoft Excel,
+                    if that means anything.
+                </p>
+            </div>
+
+            <div class="skill">
+                <h3>Others</h3>
+                <p>
+                    To be honest, I don't know what to put in here. The only reason this
+                    column exists is because only two columns will make this section
+                    kinda sparse so I have to add another one. Oh, by the way, I know
+                    how to use Microsoft Office. So that's something, right?
+                </p>
+            </div>
+        </div>
+        <a href="#projects" class="btn">My Projects</a>
+    </section>
+
+    <!-- About Me -->
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">Who I am</h2>
+        <p class="section__subtitle section__subtitle--about">
+            (un)interesting facts about me
+        </p>
+        <div class="about-me__body">
+            <p>
+                Miraculously graduated from Cal State Fullerton with a Bachelor and
+                then from USC with a Master, both in Computer Science. But if you ask
+                me if I remember anything, the answer would be a resounding
+                <strong>NO</strong>. Now, I spend about 10 percent of my day
+                "studying" and the rest browsing Reddit or watching YouTube.
+            </p>
+            <p>
+                A chronic procrastinator (by default) and self-deprecated (by choice)
+                individual seems to be a fitting description of myself. But if you
+                have a different thought, let me know.
+            </p>
+        </div>
+        <img src="img/about-me.png" alt="Another picture of me" class="about-me__img" />
+    </section>
+
+    <!-- My Projects -->
+    <section class="my-projects" id="projects">
+        <h2 class="section__title section__title--projects">My Projects</h2>
+        <p class="section__subtitle section__subtitle--projects">
+            It's not much, but it's mine (kind of)
+        </p>
+        <div class="porfolio">
+            <a href="#" class="porfolio__item">
+                <img src="img/porfolio-01.png" alt="Project 1" class="porfolio__img" />
+            </a>
+            <a href="#" class="porfolio__item">
+                <img src="img/porfolio-02.png" alt="Project 2" class="porfolio__img" />
+            </a>
+            <a href="#" class="porfolio__item">
+                <img src="img/porfolio-03.png" alt="Project 3" class="porfolio__img" />
+            </a>
+            <a href="#" class="porfolio__item">
+                <img src="img/porfolio-04.png" alt="Project 4" class="porfolio__img" />
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div id="contact-me">
+            <a href="mailto:anvngnguyen@gmail.com" class="footer__link" target="_blank">anvngnguyen@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a href="mailto:anvngnguyen@gmail.com" class="social-list__link" target="_blank">
+                        <i class="fas fa-envelope-square"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://www.linkedin.com/in/anvngnguyen/" class="social-list__link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://github.com/anvngnguyen" class="social-list__link" target="_blank">
+                        <i class="fab fa-github-square"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

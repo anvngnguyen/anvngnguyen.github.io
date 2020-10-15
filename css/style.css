@@ -99,7 +99,15 @@ strong {
 li,
 a {
   border-style: none;
+  outline: none;
   text-decoration: none;
+}
+
+a:focus,
+a:active,
+button:focus,
+button:active {
+  outline: none;
 }
 
 /* Typography */

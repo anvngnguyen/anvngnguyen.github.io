@@ -17,8 +17,13 @@ let trans = () => {
 };
 
 var navToggle = document.querySelector(".nav-toggle");
+var navColumn = document.querySelector(".nav");
 var navLinks = document.querySelectorAll(".nav__link");
 navToggle.addEventListener("click", () => {
+    if (navColumn.getAttribute("style") == "display: inline;") 
+        navColumn.removeAttribute("style");
+    else
+        navColumn.setAttribute("style", "display: inline;");
     document.body.classList.toggle('nav-open');
 });
 navLinks.forEach(link => {

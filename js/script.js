@@ -34,3 +34,15 @@ navLinks.forEach(link => {
         document.body.classList.remove('nav-open');
     });
 });
+
+var goTop = document.querySelector(".go-top");
+window.addEventListener("scroll", () => {
+    if (window.scrollY > (window.innerHeight / 2)) {
+        goTop.setAttribute("style", "visibility: visible");
+    } else {
+        goTop.setAttribute("style", "visibility: hidden");
+    }
+});
+
+var introImg = document.querySelector(".intro__img");
+introImg.setAttribute("title", "obviously not a picture of me");
